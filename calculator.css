@@ -1,3 +1,15 @@
 body {
-	background: lightyellow;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+#screen {
+	width: 400px;
+	height: 20px;
+	border: 1px solid black;
+}
+
+.hide {
+	visibility: hidden;
 }

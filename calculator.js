@@ -1,9 +1,16 @@
 s = document.querySelector('#screen');
-o = document.querySelector('#on');
-o.addEventListener('click', turnOn);
+on = document.querySelector('#on');
+off = document.querySelector('#off');
+on.addEventListener('click', turnOn);
+off.addEventListener('click', turnOff);
 
 function turnOn() {
-alert('hi');
+	s.innerText = '';
+ 	s.classList.remove('hide');
+}
+
+function turnOff() {
+ 	s.classList.add('hide');
 }
 
 
