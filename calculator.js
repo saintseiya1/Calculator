@@ -13,13 +13,21 @@ function turnOff() {
  	s.classList.add('hide');
 }
 
-
-
-n = document.querySelector('#numberButtons');
-console.table(n);
-n.addEventListener('click', num);
+numButt = document.querySelector('#numberButtons');
+console.table(numButt);
+numButt.addEventListener('click', num);
 
 function num(e) {
+	console.table(e);
+	if(e.target.value == undefined) return;
+	s.innerText += e.target.value;
+}
+
+operButt = document.querySelector('#operationButtons');
+console.table(operButt);
+operButt.addEventListener('click', operand);
+
+function operand(e) {
 	console.table(e);
 	if(e.target.value == undefined) return;
 	s.innerText += e.target.value;
