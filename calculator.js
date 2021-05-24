@@ -14,7 +14,6 @@ function turnOff() {
 }
 
 numButt = document.querySelector('#numberButtons');
-console.table(numButt);
 numButt.addEventListener('click', num);
 
 function num(e) {
@@ -24,11 +23,35 @@ function num(e) {
 }
 
 operButt = document.querySelector('#operationButtons');
-console.table(operButt);
 operButt.addEventListener('click', operand);
 
 function operand(e) {
 	console.table(e);
 	if(e.target.value == undefined) return;
 	s.innerText += e.target.value;
+	calculate();
+}
+
+function calculate(e) {
+	switch(e) {
+		
+		case '+':
+			c = a + b;
+			return c;
+			break;
+		case '-':
+			c = b - a;
+			return c;
+			break;
+		case '+':
+			c = a * b;
+			return c;
+			break;
+		case '+':
+			c = a / b;
+			return c;
+			break;
+		default:
+			return 'Please enter operation';
+	}
 }
