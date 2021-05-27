@@ -1,42 +1,37 @@
 s = document.querySelector('#screen');
-on = document.querySelector('#on');
-on.addEventListener('click', turnOn);
+clear = document.querySelector('#clear');
+clear.addEventListener('click', clearScreen);
 
+function clearScreen() {
+	divAll = document.querySelectorAll('div');
+	spanAll = document.querySelectorAll('span');
+	divLength = divAll.length - 1;
+	spanLength = spanAll.length - 1;
 
-function turnOn() {
-	divAll = document.getElementsByTagName('div');
-	spanAll = document.getElementsByTagName('span');
-	console.table(divAll);
-	console.table(spanAll);
-	//document.body.removeChild(divAll[length - 1]);
-	/*
-	document.body.removeChild(spanAll);
-	
-	s.innerText = '';
- 	s.classList.remove('hide');
- 	*/
+	for (x = 0; x <= divLength; x++) {
+		document.body.removeChild(divAll[x]);
+	}	
+	for (x = 0; x <= spanLength; x++) {
+		document.body.removeChild(spanAll[x]);
+	}
 }
 
 numButt = document.querySelector('#numberButtons');
 numButt.addEventListener('click', num);
 
-var count = 0;
-
 function num(e) {
 	if(e.target.value == undefined) return;
 	spanElementTotal = document.querySelectorAll('span');
-	console.log(spanElementTotal);
 	if (spanElementTotal.length == 0) {
 		createSecondNumber();
-		cN = document.querySelector('span');
-		cN.innerText += e.target.value;
+		span = document.querySelector('span');
+		span.innerText += e.target.value;
 	}
 	if (spanElementTotal.length > 0) {
-	cN = document.querySelectorAll('span');
-	console.table(cN);
-	console.table(count);
-	console.table(cN.length);
-	cN[count -1].innerText += e.target.value;
+	spanTotal = document.querySelectorAll('span');
+	spanLength = spanTotal.length - 1;
+
+	spanTotal[spanLength].innerText += e.target.value;
 	}
 }
 
@@ -61,7 +56,13 @@ function createSecondNumber() {
 	secondNumber = document.createElement('span');
 	secondNumber.setAttribute('id', 'num2');
 	document.body.appendChild(secondNumber);
-	++count;
+}
+
+equals = document.querySelector('#equals');
+equals.addEventListener('click', calculation);
+
+function calculation() {
+	alert('hi there');
 }
 
 function calculate(e) {
