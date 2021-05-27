@@ -23,7 +23,7 @@ function num(e) {
 	if(e.target.value == undefined) return;
 	spanElementTotal = document.querySelectorAll('span');
 	if (spanElementTotal.length == 0) {
-		createSecondNumber();
+		createSecondNumber('numA');
 		span = document.querySelector('span');
 		span.innerText += e.target.value;
 	}
@@ -43,18 +43,18 @@ function operand(e) {
 	if(e.target.value == undefined) return;
 	operandText();
 	opText.innerText += e.target.value;
-	createSecondNumber();
+	createSecondNumber('numB');
 }
 
 function operandText() {
 	opText = document.createElement('div');
-	opText.setAttribute('id', 'op1');
+	opText.setAttribute('id', 'operand');
 	document.body.appendChild(opText);
 }
 
-function createSecondNumber() {
+function createSecondNumber(string) {
 	secondNumber = document.createElement('span');
-	secondNumber.setAttribute('id', 'num2');
+	secondNumber.setAttribute('id', string);
 	document.body.appendChild(secondNumber);
 }
 
@@ -62,21 +62,19 @@ equals = document.querySelector('#equals');
 equals.addEventListener('click', calculation);
 
 function calculation() {
-	alert('hi there');
-}
-
-function calculate(e) {
-	switch(e) {
-		
+	a = document.querySelector('#numA');
+	b = document.querySelector('#numB');
+	op = document.querySelector('#operand');
+	switch(op.innerText) {
 		case '+':
-			c = a + b;
-			return c;
-			break;
+		c = parseInt(a.innerText) + parseInt(b.innerText);
+		alert(c);
+		
 		case '-':
 			c = b - a;
 			return c;
 			break;
-		case '+':
+		case 'x':
 			c = a * b;
 			return c;
 			break;
@@ -88,3 +86,4 @@ function calculate(e) {
 			return 'Please enter operation';
 	}
 }
+
