@@ -47,7 +47,7 @@ function operand(e) {
 }
 
 function operandText() {
-	opText = document.createElement('div');
+	opText = document.createElement('span');
 	opText.setAttribute('id', 'operand');
 	document.body.appendChild(opText);
 }
@@ -62,28 +62,36 @@ equals = document.querySelector('#equals');
 equals.addEventListener('click', calculation);
 
 function calculation() {
-	a = document.querySelector('#numA');
-	b = document.querySelector('#numB');
-	op = document.querySelector('#operand');
-	switch(op.innerText) {
+	a = document.querySelector('#numA').innerText;
+	a = parseInt(a);
+	b = document.querySelector('#numB').innerText;
+	b = parseInt(b);
+	op = document.querySelector('#operand').innerText;
+	switch(op) {
 		case '+':
-		c = parseInt(a.innerText) + parseInt(b.innerText);
-		alert(c);
-		
+			c = a + b;
+			printResult(c);
+			break;
 		case '-':
-			c = b - a;
-			return c;
+			c = a - b;
+			printResult(c);
 			break;
 		case 'x':
 			c = a * b;
-			return c;
+			printResult(c);
 			break;
-		case '+':
+		case '/':
 			c = a / b;
-			return c;
+			printResult(c);
 			break;
 		default:
-			return 'Please enter operation';
+			c = 'Please enter operation';
+			printResult(c);
+	}
+	function printResult(out) {
+		span = document.createElement('span');
+		span.innerText = out;
+		document.body.appendChild(span);
 	}
 }
 
