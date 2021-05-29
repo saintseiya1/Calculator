@@ -39,22 +39,31 @@ operButt = document.querySelector('#operationButtons');
 operButt.addEventListener('click', operand);
 
 function operand(e) {
-	//e.preventDefault();
+	a = document.querySelector('.numA').innerText;
+	if(!a) return;
 	if(e.target.value == undefined) return;
 	operandText();
 	opText.innerText += e.target.value;
 	createSecondNumber('numB');
+	disableOperand();
 }
 
 function operandText() {
 	opText = document.createElement('span');
-	opText.setAttribute('id', 'operand');
+	opText.setAttribute('class', 'operand');
 	document.body.appendChild(opText);
+}
+
+function disableOperand() {
+	op = document.querySelectorAll('.operation');
+	for (x of op) {
+		x.setAttribute('disabled', 'true');
+	}
 }
 
 function createSecondNumber(string) {
 	secondNumber = document.createElement('span');
-	secondNumber.setAttribute('id', string);
+	secondNumber.setAttribute('class', string);
 	document.body.appendChild(secondNumber);
 }
 
@@ -62,11 +71,11 @@ equals = document.querySelector('#equals');
 equals.addEventListener('click', calculation);
 
 function calculation() {
-	a = document.querySelector('#numA').innerText;
+	a = document.querySelector('.numA').innerText;
 	a = parseInt(a);
-	b = document.querySelector('#numB').innerText;
+	b = document.querySelector('.numB').innerText;
 	b = parseInt(b);
-	op = document.querySelector('#operand').innerText;
+	op = document.querySelector('.operand').innerText;
 	switch(op) {
 		case '+':
 			c = a + b;
