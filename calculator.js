@@ -14,6 +14,7 @@ function clearScreen() {
 	for (x = 0; x <= spanLength; x++) {
 		document.body.removeChild(spanAll[x]);
 	}
+	enableOperand();
 }
 
 numButt = document.querySelector('#numberButtons');
@@ -58,6 +59,13 @@ function disableOperand() {
 	op = document.querySelectorAll('.operation');
 	for (x of op) {
 		x.setAttribute('disabled', 'true');
+	}
+}
+
+function enableOperand() {
+	op = document.querySelectorAll('.operation');
+	for (x of op) {
+	x.removeAttribute('disabled');	
 	}
 }
 
