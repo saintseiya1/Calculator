@@ -3,18 +3,14 @@ clear = document.querySelector('#clear');
 clear.addEventListener('click', clearScreen);
 
 function clearScreen() {
-	divAll = document.querySelectorAll('div');
 	spanAll = document.querySelectorAll('span');
-	divLength = divAll.length - 1;
 	spanLength = spanAll.length - 1;
 
-	for (x = 0; x <= divLength; x++) {
-		document.body.removeChild(divAll[x]);
-	}	
 	for (x = 0; x <= spanLength; x++) {
 		document.body.removeChild(spanAll[x]);
 	}
 	enableOperand();
+	showButtons();
 }
 
 numButt = document.querySelector('#numberButtons');
@@ -22,17 +18,26 @@ numButt.addEventListener('click', num);
 
 function num(e) {
 	if(e.target.value == undefined) return;
-	spanElementTotal = document.querySelectorAll('span');
-	if (spanElementTotal.length == 0) {
+	nA = document.querySelector('.numA');
+	if(!nA) {
 		createSecondNumber('numA');
-		span = document.querySelector('span');
-		span.innerText += e.target.value;
-	}
-	if (spanElementTotal.length > 0) {
-	spanTotal = document.querySelectorAll('span');
-	spanLength = spanTotal.length - 1;
-
-	spanTotal[spanLength].innerText += e.target.value;
+		sA = document.querySelector('.numA');
+		sA.innerText += e.target.value;
+	} else {
+		op = document.querySelector('.operand');
+		if(!op) {
+			sA = document.querySelector('.numA');
+			sA.innerText += e.target.value;
+		} else {
+			sB = document.querySelector('.numB');
+			if(!sB) {
+				createSecondNumber('numB');		
+				sB = document.querySelector('.numB');		
+				sB.innerText += e.target.value;	
+			} else {
+					sB.innerText += e.target.value;	
+			}	
+		}
 	}
 }
 
@@ -41,18 +46,19 @@ operButt.addEventListener('click', operand);
 
 function operand(e) {
 	a = document.querySelector('.numA').innerText;
-	if(!a) return;
-	if(e.target.value == undefined) return;
+	if(!a || e.target.value == undefined) return;
 	operandText();
-	opText.innerText += e.target.value;
-	createSecondNumber('numB');
-	disableOperand();
+	opText.innerText = e.target.value;
 }
 
 function operandText() {
-	opText = document.createElement('span');
-	opText.setAttribute('class', 'operand');
-	document.body.appendChild(opText);
+	op = document.querySelector('.operand');
+	if(!op) {
+		opText = document.createElement('span');
+		opText.setAttribute('class', 'operand');
+		document.body.appendChild(opText);
+	}
+	return;
 }
 
 function disableOperand() {
@@ -106,9 +112,39 @@ function calculation() {
 			printResult(c);
 	}
 	function printResult(out) {
-		span = document.createElement('span');
-		span.innerText = out;
-		document.body.appendChild(span);
+		eqspan = document.createElement('span');
+		eqspan.innerText = ' = ' + out;
+		document.body.appendChild(eqspan);
+		hideButtons();
 	}
 }
 
+function hideButtons() {
+	e = document.querySelector('#equals');
+	n = document.querySelectorAll('.number');
+	o = document.querySelectorAll('.operation');
+	
+	e.classList.add('hide');
+
+	for (x of o) {
+		x.classList.add('hide');
+	}		
+	for (x of n) {
+		x.classList.add('hide');
+	}		
+}
+
+function showButtons() {
+	e = document.querySelector('#equals');
+	n = document.querySelectorAll('.number');
+	o = document.querySelectorAll('.operation');
+	
+	e.classList.remove('hide');
+
+	for (x of o) {
+		x.classList.remove('hide');
+	}		
+	for (x of n) {
+		x.classList.remove('hide');
+	}	
+}
