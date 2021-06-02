@@ -1,4 +1,3 @@
-s = document.querySelector('#screen');
 clear = document.querySelector('#clear');
 clear.addEventListener('click', clearScreen);
 
@@ -86,9 +85,9 @@ equals.addEventListener('click', calculation);
 
 function calculation() {
 	a = document.querySelector('.numA').innerText;
-	a = parseInt(a);
+	a = parseFloat(a);
 	b = document.querySelector('.numB').innerText;
-	b = parseInt(b);
+	b = parseFloat(b);
 	op = document.querySelector('.operand').innerText;
 	switch(op) {
 		case '+':
