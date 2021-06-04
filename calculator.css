@@ -5,17 +5,16 @@
 }
 
 body {
-	width: 200px;
-	height: 400px;
-	background-color: yellow;
+	background-color: lightyellow;
 }
 
 span {
 	width: 300px;
 	height: 20px;
 	border: 1px solid black;
-	margin-left: 10px;
 	padding: 5px;
+	background: white;
+	margin-left: 10px;
 }
 
 .hide {
@@ -25,11 +24,13 @@ span {
 button {
 	margin: 1px;
 	width: 20px;
+	cursor: pointer;
 }
 
 #numberButtons {
 	background: lightblue;
-	width: 80px;
+	width: 95px;
+
 }
 .number[value='0'] {
 	width: 45px;
@@ -38,10 +39,21 @@ button {
 	width: 19px;
 }
 #operationButtons {
-	float: right;
-	width: 10px;
 	background: red;
+	width: 50px;
+	position: fixed;
+	left: 100px;
+	top: 30px;
+	clear: both;
 }
 #clear {
-	width: 50px;
+	width: 150px;
+}
+
+#equals {
+	clear: both;
+}
+
+hr {
+	margin-bottom: 20px;
 }
