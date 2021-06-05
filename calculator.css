@@ -57,3 +57,10 @@ button {
 hr {
 	margin-bottom: 20px;
 }
+
+.input {
+	width: 100px;
+}
+.active {
+	background-color: gray;
+}

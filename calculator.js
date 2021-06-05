@@ -1,3 +1,15 @@
+inA = document.querySelector('#inputA');
+inA.addEventListener('click', enterA);
+
+function enterA() {
+
+	spA = document.querySelector('#spA');
+	spA.classList.add('active');
+
+}
+
+
+/*
 clear = document.querySelector('#clear');
 clear.addEventListener('click', clearScreen);
 
@@ -147,3 +159,4 @@ function showButtons() {
 		x.classList.remove('hide');
 	}	
 }
+*/
