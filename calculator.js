@@ -1,12 +1,24 @@
 inA = document.querySelector('#inputA');
 inA.addEventListener('click', enterA);
+spA = document.querySelector('#spA');
+nb = document.querySelector('#numberButtons');
+nb.addEventListener('click', enterNumber);
+arrayA = [];
 
 function enterA() {
-
-	spA = document.querySelector('#spA');
 	spA.classList.add('active');
+}
+
+function enterNumber(e) {
+	
+	textA = e.target.value;
+	arrayA.push(textA);
+	spA.innerText = arrayA;
+
 
 }
+
+
 
 
 /*
