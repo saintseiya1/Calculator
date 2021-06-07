@@ -3,6 +3,10 @@ inA.addEventListener('click', enterA);
 spA = document.querySelector('#spA');
 nb = document.querySelector('#numberButtons');
 nb.addEventListener('click', enterNumber);
+
+ob = document.querySelector('#operationButtons');
+ob.addEventListener('click', enterOperand);
+
 arrayA = [];
 
 function enterA() {
@@ -10,12 +14,15 @@ function enterA() {
 }
 
 function enterNumber(e) {
-	
 	textA = e.target.value;
 	arrayA.push(textA);
 	spA.innerText = arrayA;
+}
 
-
+function enterOperand(e) {
+	textO = e.target.value;
+	spOp = document.querySelector('#spOp');
+	spOp.innerText = textO;
 }
 
 
