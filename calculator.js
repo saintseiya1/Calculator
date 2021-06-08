@@ -1,30 +1,57 @@
-inA = document.querySelector('#inputA');
-inA.addEventListener('click', enterA);
+inputA = document.querySelector('#inputA');
+inputA.addEventListener('click', activateA);
 spA = document.querySelector('#spA');
+
+inputB = document.querySelector('#inputB');
+inputB.addEventListener('click', activateB);
+spB = document.querySelector('#spB');
+
 nb = document.querySelector('#numberButtons');
 nb.addEventListener('click', enterNumber);
 
 ob = document.querySelector('#operationButtons');
 ob.addEventListener('click', enterOperand);
+spO = document.querySelector('#spO');
 
-arrayA = [];
-
-function enterA() {
+function activateA() {
 	spA.classList.add('active');
+	spB.classList.remove('active');
+
 }
 
+function activateB() {
+	spB.classList.add('active');
+	spA.classList.remove('active');
+}
+/*
 function enterNumber(e) {
+	flag = isActive();
+	if(flag) {
 	textA = e.target.value;
 	arrayA.push(textA);
 	spA.innerText = arrayA;
+	}
+}
+*/
+
+function enterNumber(e) {
+	flag = isActive();
+	if(flag) {
+	text = [];
+	text.push(e.target.value);
+	flag.innerText += text;
+	}
 }
 
 function enterOperand(e) {
-	textO = e.target.value;
-	spOp = document.querySelector('#spOp');
-	spOp.innerText = textO;
+	if(e.target.value == undefined) return;
+	spO.innerText = e.target.value;	
 }
 
+function isActive() {
+	result = document.querySelector('.active');
+	return result;
+}
 
 
 
