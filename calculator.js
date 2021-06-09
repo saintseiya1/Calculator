@@ -53,6 +53,48 @@ function isActive() {
 	return result;
 }
 
+equals = document.querySelector('#equals');
+equals.addEventListener('click', calculation);
+
+function calculation() {
+	a = spA.innerText;
+	a = parseFloat(a);
+	b = spB.innerText;
+	b = parseFloat(b);
+	op = spO.innerText;
+	switch(op) {
+		case '+':
+			c = a + b;
+			printResult(c);
+			break;
+		case '-':
+			c = a - b;
+			printResult(c);
+			break;
+		case 'x':
+			c = a * b;
+			printResult(c);
+			break;
+		case '/':
+			c = a / b;
+			printResult(c);
+			break;
+		default:
+			c = 'Please enter operation';
+			printResult(c);
+	}
+	function printResult(out) {
+		eqspan = document.createElement('span');
+		eqspan.innerText = ' = ' + out;
+		document.body.appendChild(eqspan);
+		hideButtons();
+	}
+}
+
+function hideButtons() {
+	equals.classList.add('hide');
+}
+
 
 
 /*
