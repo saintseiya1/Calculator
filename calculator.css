@@ -33,10 +33,10 @@ button {
 
 }
 .number[value='0'] {
-	width: 45px;
+	width: 46px;
 }
 .number[value='.'] {
-	width: 19px;
+	width: 20px;
 }
 #operationButtons {
 	background: red;
@@ -62,5 +62,8 @@ hr {
 	width: 100px;
 }
 .active {
+	background-color: yellow;
+}
+.highlight {
 	background-color: yellow;
 }

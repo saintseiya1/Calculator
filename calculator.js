@@ -13,15 +13,22 @@ ob = document.querySelector('#operationButtons');
 ob.addEventListener('click', enterOperand);
 spO = document.querySelector('#spO');
 
+output = document.querySelector('#output');
+
 function activateA() {
 	spA.classList.add('active');
+	inputA.classList.add('highlight');
 	spB.classList.remove('active');
+	inputB.classList.remove('highlight');
+
 
 }
 
 function activateB() {
 	spB.classList.add('active');
+	inputB.classList.add('highlight');
 	spA.classList.remove('active');
+	inputA.classList.remove('highlight');
 }
 /*
 function enterNumber(e) {
@@ -84,10 +91,8 @@ function calculation() {
 			printResult(c);
 	}
 	function printResult(out) {
-		eqspan = document.createElement('span');
-		eqspan.innerText = ' = ' + out;
-		document.body.appendChild(eqspan);
-		hideButtons();
+		output.innerText = ' = ' + out;
+		//hideButtons();
 	}
 }
 
