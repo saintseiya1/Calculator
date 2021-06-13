@@ -16,7 +16,14 @@ spO = document.querySelector('#spO');
 cl = document.querySelector('#clear');
 cl.addEventListener('click', clearScreen);
 
+bk = document.querySelector('#backspace');
+bk.addEventListener('click', backspace);
+
 output = document.querySelector('#output');
+
+function backspace() {
+	alert('delete last item');
+}
 
 function activateA() {
 	spA.classList.add('active');
