@@ -22,7 +22,14 @@ bk.addEventListener('click', backspace);
 output = document.querySelector('#output');
 
 function backspace() {
-	alert('delete last item');
+	activeSpan = isActive();
+	if(activeSpan) {
+	newSpan = [];
+	explodeString = activeSpan.innerText;
+	newSpan = explodeString;
+	newSpan.pop();
+	activeSpan.innerText = newSpan;
+	}
 }
 
 function activateA() {
