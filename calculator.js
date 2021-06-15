@@ -24,10 +24,10 @@ output = document.querySelector('#output');
 function backspace() {
 	activeSpan = isActive();
 	if(activeSpan) {
-	newSpan = [];
-	explodeString = activeSpan.innerText;
-	newSpan = explodeString;
-	newSpan.pop();
+
+		newString = activeSpan.innerText;
+		newSpan = newString.split("");
+		newSpan.pop();
 	activeSpan.innerText = newSpan;
 	}
 }
