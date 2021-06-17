@@ -14,7 +14,7 @@ span {
 	border: 1px solid black;
 	padding: 5px;
 	background: white;
-	margin-left: 10px;
+
 }
 
 .hide {
@@ -46,13 +46,6 @@ button {
 	top: 30px;
 	clear: both;
 }
-#clear {
-	width: 150px;
-}
-
-#equals {
-	clear: both;
-}
 
 hr {
 	margin-bottom: 20px;
@@ -61,9 +54,24 @@ hr {
 .input {
 	width: 100px;
 }
+
 .active {
 	background-color: yellow;
 }
+
 .highlight {
 	background-color: yellow;
+}
+
+.function {
+	display: block;
+	width: 90px;
+	float: left;
+	clear: both;
+}
+
+#grid {
+	background: blue;
+	width: 100px;
+	height: 80px;
 }
