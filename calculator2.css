@@ -63,3 +63,7 @@ button:hover {
 .highlight {
 	background: yellow;
 }
+
+#backspace {
+width: 65px;
+}
