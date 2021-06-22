@@ -10,6 +10,12 @@ html {
 	background-color: blue;
 }
 
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 #numberButtons {
 	width: 200px;
 	height: 200px;
@@ -21,7 +27,7 @@ html {
 	width: 100px;
 	height: 100px;
 	background-color: gray;
-	float: right;
+	floatxxx: right;
 }
 
 button {
@@ -40,7 +46,7 @@ button[value='0'] {
 	height: 300px;
 	background-color: brown;
 }
-#grid {
+#gridxxx {
 	clear: both;
 }
 #grid button {
