@@ -27,7 +27,7 @@ main {
 	width: 100px;
 	height: 100px;
 	background-color: gray;
-	floatxxx: right;
+	float: left;
 }
 
 button {
@@ -46,8 +46,8 @@ button[value='0'] {
 	height: 300px;
 	background-color: brown;
 }
-#gridxxx {
-	clear: both;
+#grid {
+	float: left;
 }
 #grid button {
 	background-color: orange;
