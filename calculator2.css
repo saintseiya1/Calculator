@@ -16,6 +16,10 @@ main {
 	align-items: center;
 }
 
+p {
+	display: inline-block;
+}
+
 #numberButtons {
 	width: 200px;
 	height: 200px;
