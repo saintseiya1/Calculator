@@ -36,6 +36,9 @@ p {
 	float: left;
 	margin-left: 28px;
 }
+#numberButtons, #operationButtons, #keypad {
+	background-color: black;
+}
 
 button {
 	background-color: darkgray;
@@ -49,10 +52,10 @@ button[value='0'] {
 }
 
 #keypad {
-	width: 300px;
+	width: 225px;
 	height: 250px;
-	//background-color: brown;
 }
+
 #grid {
 	float: left;
 }
