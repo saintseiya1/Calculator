@@ -8,6 +8,9 @@
 
 html {
 	background-color: dodgerblue;
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
 }
 
 /*
@@ -52,8 +55,9 @@ button[value='0'] {
 }
 
 #keypad {
-	width: 225px;
+	width: 250px;
 	height: 250px;
+	border: 7px outset lightgray;
 }
 
 #grid {
@@ -63,7 +67,7 @@ button[value='0'] {
 	background-color: orange;
 }
 #grid button:hover {
-	background-color: yellow;
+	background-color: darkorange;
 }
 button:hover {
 	background-color: grey;
@@ -73,14 +77,22 @@ button:hover {
 	width: 80px;
 }
 
-
 #output {
-	font-size: 200%;
-}
-.highlight {
-	background: yellow;
+	font-size: 150%;
 }
 
 #backspace {
 width: 70px;
+}
+
+.input {
+	background-color: darkorange;
+}
+
+.input:hover {
+	background-color: orange;
+}
+
+.highlight {
+	background-color: yellow;
 }
