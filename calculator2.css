@@ -7,19 +7,11 @@
 }
 
 html {
-	background-color: dodgerblue;
+	background: no-repeat linear-gradient(blue, lightblue, dodgerblue);
 	display: flex;
 	justify-content: center;
 	margin-top: 50px;
 }
-
-/*
-main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-*/
 
 p {
 	display: inline-block;
@@ -93,6 +85,6 @@ width: 70px;
 	background-color: orange;
 }
 
-.highlight {
+.highlight, .highlight:hover {
 	background-color: yellow;
 }
