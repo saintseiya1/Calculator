@@ -6,7 +6,7 @@
 	font-weight: bold;
 }
 
-html {
+body {
 	background: no-repeat linear-gradient(blue, lightblue, dodgerblue);
 	display: flex;
 	justify-content: center;
