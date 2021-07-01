@@ -32,11 +32,11 @@ p {
 	margin-left: 28px;
 }
 #numberButtons, #operationButtons, #keypad {
-	background-color: black;
+	background: black;
 }
 
 button {
-	background-color: darkgray;
+	background: silver;
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
@@ -87,4 +87,6 @@ width: 70px;
 
 .highlight, .highlight:hover {
 	background-color: yellow;
+	text-transform: uppercase;
+	width: 85px;
 }
