@@ -6,6 +6,9 @@
 	font-weight: bold;
 }
 
+h1 {
+	font-family: cursive;
+}
 body {
 	background: no-repeat linear-gradient(blue, lightblue, dodgerblue);
 	display: flex;
