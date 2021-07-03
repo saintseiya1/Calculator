@@ -6,18 +6,19 @@
 	font-weight: bold;
 }
 
-  h1 {
-    color: white;
-    font-family: arial;
-    text-transform: uppercase;    
-    text-align: center;
-  }
-  h1:hover {
-    text-shadow: 1px 1px 2px gray, 3px 3px 5px tomato;
-    cursor: pointer;
-font-family: cursive;
-font-size: 193%;
-  }
+h1 {
+	color: white;
+	font-family: arial;
+	text-transform: uppercase;    
+	text-align: center;
+}
+
+h1:hover {
+	text-shadow: 1px 1px 2px gray, 3px 3px 5px tomato;
+	cursor: pointer;
+	font-family: cursive;
+	font-size: 193%;
+}
 
 body {
 	background: no-repeat linear-gradient(blue, lightblue, dodgerblue);
@@ -31,7 +32,6 @@ p {
 }
 
 #numberButtons {
-	//width: 200px;
 	height: 150px;
 	background-color: dodgerblue;
 	float: left;
@@ -102,4 +102,9 @@ width: 70px;
 	background-color: yellow;
 	text-transform: uppercase;
 	width: 85px;
+}
+
+footer {
+	border: 5px green outset;
+	border-radius: 5px;
 }
