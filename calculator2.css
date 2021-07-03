@@ -6,9 +6,19 @@
 	font-weight: bold;
 }
 
-h1 {
-	font-family: cursive;
-}
+  h1 {
+    color: white;
+    font-family: arial;
+    text-transform: uppercase;    
+    text-align: center;
+  }
+  h1:hover {
+    text-shadow: 1px 1px 2px gray, 3px 3px 5px tomato;
+    cursor: pointer;
+font-family: cursive;
+font-size: 193%;
+  }
+
 body {
 	background: no-repeat linear-gradient(blue, lightblue, dodgerblue);
 	display: flex;
