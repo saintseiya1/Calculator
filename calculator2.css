@@ -111,3 +111,9 @@ footer {
 	border-radius: 5px;
 	background: red;
 }
+
+.active {
+	background-color: white;
+	color: black;
+	padding: 2px;
+}
