@@ -99,6 +99,7 @@ width: 70px;
 }
 
 .highlight, .highlight:hover {
+	color: black;
 	background-color: yellow;
 	font-family: arial;
 	font-weight: bold;
