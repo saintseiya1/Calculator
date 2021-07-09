@@ -118,3 +118,20 @@ footer {
 	color: black;
 	padding: 2px;
 }
+
+.hide {
+	opacity: 0;
+}
+
+.fadeIn {
+  position: static;
+  animation-name: addition;
+  animation-duration: 3s;
+}
+
+@keyframes addition {
+  from { opacity: 0; 
+    }
+  to { opacity: 1;
+    }
+}

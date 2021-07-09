@@ -21,6 +21,15 @@ bk.addEventListener('click', backspace);
 
 output = document.querySelector('#output');
 
+b = document.querySelector('h1');
+b.addEventListener('click', appear);
+
+function appear() {
+	a = document.querySelector('main');
+	a.classList.remove('hide');
+	a.classList.add('fadeIn');
+}
+
 function backspace() {
 	activeSpan = isActive();
 	if(activeSpan) {
