@@ -17,7 +17,6 @@ h1:hover {
 	text-shadow: 1px 1px 2px gray, 3px 3px 5px tomato;
 	cursor: pointer;
 	font-family: cursive;
-	//font-size: 193%;
 }
 
 body {
@@ -98,7 +97,7 @@ button:hover {
 }
 
 #output {
-	font-size: 150%;
+	font-size: 120%;
 }
 
 #backspace {
