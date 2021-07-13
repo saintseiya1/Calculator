@@ -22,9 +22,9 @@ bk.addEventListener('click', backspace);
 output = document.querySelector('#output');
 
 b = document.querySelector('h1');
-b.addEventListener('click', appear);
+b.addEventListener('click', main);
 
-function appear() {
+function main() {
 	a = document.querySelector('main');
 	a.classList.remove('hide');
 	a.classList.add('fadeIn');
