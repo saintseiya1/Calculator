@@ -168,8 +168,11 @@ footer {
     }
 }
 
-#keypad {
-		background: url('mug.png') 100px 100px;
+#wrapper {
+	background: url('cartoon-calculator.png');
 	background-repeat: no-repeat;
+	background-size: 225px 250px;
+	background-position: 270px 45px;
+
 
 }
