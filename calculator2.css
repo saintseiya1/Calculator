@@ -162,4 +162,6 @@ footer {
 	background-repeat: no-repeat;
 	background-size: 225px 250px;
 	background-position: 270px 45px;
+	animation-name: addition;
+	animation-duration: 3s;
 }

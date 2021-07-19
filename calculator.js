@@ -22,12 +22,19 @@ bk.addEventListener('click', backspace);
 output = document.querySelector('#output');
 
 b = document.querySelector('h1');
-b.addEventListener('click', main);
+b.addEventListener('click', function() {
+	main();
+	alertMessage();
+});
 
 function main() {
 	a = document.querySelector('main');
 	a.classList.remove('hide');
 	a.classList.add('fadeIn');
+}
+
+function alertMessage() {
+	alert('Hello!');
 }
 
 function backspace() {
