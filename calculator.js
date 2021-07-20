@@ -1,40 +1,36 @@
-inputA = document.querySelector('#inputA');
+let inputA = document.querySelector('#inputA');
 inputA.addEventListener('click', activateA);
-spA = document.querySelector('#spA');
+let spA = document.querySelector('#spA');
 
-inputB = document.querySelector('#inputB');
+let inputB = document.querySelector('#inputB');
 inputB.addEventListener('click', activateB);
-spB = document.querySelector('#spB');
+let spB = document.querySelector('#spB');
 
-nb = document.querySelector('#numberButtons');
+let nb = document.querySelector('#numberButtons');
 nb.addEventListener('click', enterNumber);
 
-ob = document.querySelector('#operationButtons');
+let ob = document.querySelector('#operationButtons');
 ob.addEventListener('click', enterOperand);
-spO = document.querySelector('#spO');
+let spO = document.querySelector('#spO');
 
-cl = document.querySelector('#clear');
+let cl = document.querySelector('#clear');
 cl.addEventListener('click', clearScreen);
 
-bk = document.querySelector('#backspace');
+let bk = document.querySelector('#backspace');
 bk.addEventListener('click', backspace);
 
-output = document.querySelector('#output');
+let output = document.querySelector('#output');
 
-b = document.querySelector('h1');
+let b = document.querySelector('h1');
 b.addEventListener('click', function() {
 	main();
-	alertMessage();
+	welcome();
 });
 
 function main() {
-	a = document.querySelector('main');
+	let a = document.querySelector('main');
 	a.classList.remove('hide');
 	a.classList.add('fadeIn');
-}
-
-function alertMessage() {
-	alert('Hello!');
 }
 
 function backspace() {
@@ -62,14 +58,14 @@ function activateB() {
 }
 
 function isActive() {
-	result = document.querySelector('.active');
+	let result = document.querySelector('.active');
 	return result;
 }
 
 function enterNumber(e) {
-	activeSpan = isActive();
+	let activeSpan = isActive();
 	if(activeSpan) {
-	text = [];
+	let text = [];
 	text.push(e.target.value);
 	activeSpan.innerText += text;
 	}
@@ -80,15 +76,15 @@ function enterOperand(e) {
 	spO.innerText = e.target.value;	
 }
 
-equals = document.querySelector('#equals');
+let equals = document.querySelector('#equals');
 equals.addEventListener('click', calculation);
 
 function calculation() {
-	a = spA.innerText;
+	let a = spA.innerText;
 	a = parseFloat(a);
-	b = spB.innerText;
+	let b = spB.innerText;
 	b = parseFloat(b);
-	op = spO.innerText;
+	let op = spO.innerText;
 	switch(op) {
 		case '+':
 			c = a + b;
@@ -116,10 +112,19 @@ function calculation() {
 }
 
 function clearScreen() {
-	spanAll = document.querySelectorAll('span');
-	spanLength = spanAll.length - 1;
+	let spanAll = document.querySelectorAll('span');
+	let spanLength = spanAll.length - 1;
 
 	for (x = 0; x <= spanLength; x++) {
 		spanAll[x].innerText = '';
 	}
+}
+
+function welcome() {
+	let w = document.createElement('div');
+	let image = '<h1>Enter your numbers</h1>' +
+				'<img src="cartoon-calculator.png" alt="calculator cartoon" />';
+	w.innerHTML = image;
+	w.classList.add('modal');
+	document.body.appendChild(w);
 }
