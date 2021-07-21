@@ -123,8 +123,18 @@ function clearScreen() {
 function welcome() {
 	let w = document.createElement('div');
 	let image = '<h1>Enter your numbers</h1>' +
-				'<img src="cartoon-calculator.png" alt="calculator cartoon" />';
+				'<img src="cartoon-calculator.png" alt="calculator cartoon" />' +
+				'<a href="#" class="exit">close X</a>';
 	w.innerHTML = image;
 	w.classList.add('modal');
 	document.body.appendChild(w);
+	let ex = document.querySelector('.exit');
+	ex.addEventListener('click', close);
+}
+
+function close(e) {
+	e.preventDefault();
+	removalDIV = this.parentNode;
+	parentUL = removalDIV.parentNode;
+	parentUL.removeChild(removalDIV);
 }
