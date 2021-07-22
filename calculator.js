@@ -21,9 +21,8 @@ bk.addEventListener('click', backspace);
 
 let output = document.querySelector('#output');
 
-let b = document.querySelector('h1');
-b.addEventListener('click', function() {
-	main();
+let h = document.querySelector('h1');
+h.addEventListener('click', function() {
 	welcome();
 });
 
@@ -122,7 +121,7 @@ function clearScreen() {
 
 function welcome() {
 	let w = document.createElement('div');
-	let image = '<h1>Enter your numbers</h1>' +
+	let image = '<h2>Enter your numbers</h2>' +
 				'<img src="cartoon-calculator.png" alt="calculator cartoon" />' +
 				'<a href="#" class="exit">close X</a>';
 	w.innerHTML = image;
@@ -130,6 +129,7 @@ function welcome() {
 	document.body.appendChild(w);
 	let ex = document.querySelector('.exit');
 	ex.addEventListener('click', close);
+	h.classList.add('hide');
 }
 
 function close(e) {
@@ -137,4 +137,8 @@ function close(e) {
 	removalDIV = this.parentNode;
 	parentUL = removalDIV.parentNode;
 	parentUL.removeChild(removalDIV);
+
+	main();
+	h.classList.remove('hide');
+
 }
