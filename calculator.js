@@ -32,6 +32,12 @@ function main() {
 	a.classList.add('fadeIn');
 }
 
+function footer() {
+	let f = document.querySelector('footer');
+	f.classList.remove('hide');
+	//f.classList.add('fadeIn');
+}
+
 function backspace() {
 	activeSpan = isActive();
 	if(activeSpan) {
@@ -130,6 +136,13 @@ function welcome() {
 	let ex = document.querySelector('.exit');
 	ex.addEventListener('click', close);
 	h.classList.add('hide');
+
+	let a = document.querySelector('main');
+	a.classList.add('hide');
+
+	let f = document.querySelector('footer');
+	f.classList.add('hide');
+
 }
 
 function close(e) {
@@ -139,6 +152,7 @@ function close(e) {
 	parentUL.removeChild(removalDIV);
 
 	main();
+	footer();
 	h.classList.remove('hide');
 
 }

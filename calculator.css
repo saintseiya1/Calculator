@@ -141,7 +141,8 @@ footer {
 }
 
 .hide {
-	opacity: 0;
+	display: none;
+	//opacity: 0;
 }
 
 .fadeIn {
@@ -179,5 +180,5 @@ x#wrapper {
 
 .exit {
 	display: flex;
-	
+	color: black;	
 }
