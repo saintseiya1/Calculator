@@ -168,7 +168,8 @@ x#wrapper {
 }
 
 .modal {
-	position: fixed;
+
+	justify-content: center;
 	top: 200px;
 	left: 200px;
 }
@@ -178,7 +179,10 @@ x#wrapper {
 	height: 200px;
 }
 
+.modal h2, .modal img, .modal a {
+	display: block;
+}
 .exit {
-	display: flex;
+	text-align: center;
 	color: black;	
 }
