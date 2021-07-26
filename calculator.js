@@ -126,10 +126,12 @@ function clearScreen() {
 }
 
 function welcome() {
+	let date = new Date();
 	let w = document.createElement('div');
 	let image = '<h2>Enter your numbers</h2>' +
 				'<img src="cartoon-calculator.png" alt="calculator cartoon" />' +
-				'<a href="#" class="exit">close X</a>';
+				'<a href="#" class="exit">close X</a>' +
+				`<span>${date}</span>`;
 	w.innerHTML = image;
 	w.classList.add('modal');
 	document.body.appendChild(w);
