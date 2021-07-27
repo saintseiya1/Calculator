@@ -168,7 +168,6 @@ footer {
 }
 
 .modal {
-
 	justify-content: center;
 	top: 200px;
 	left: 200px;
@@ -185,4 +184,20 @@ footer {
 .exit {
 	text-align: center;
 	color: black;	
+}
+
+.modal {
+  position: relative;
+  animation-name: slideDown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+  from { top: -100px; 
+  	left: 0px;
+    }
+  to { top: 100px;
+  	left: 0px;
+    }
 }
