@@ -127,7 +127,7 @@ function clearScreen() {
 
 function welcome() {
 	let w = document.createElement('div');
-	let image = '<h2>Enter your numbers</h2>' +
+	let image = '<h3>Calculator by RHJ Design</h3>' +
 				'<img src="cartoon-calculator.png" alt="calculator cartoon" />' +
 				'<a href="#" class="exit">close X</a>';
 	w.innerHTML = image;
