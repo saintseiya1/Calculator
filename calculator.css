@@ -188,15 +188,22 @@ footer {
 .modal {
   position: relative;
   animation-name: slideDown;
-  animation-duration: 1s;
+  animation-duration: .75s;
   animation-fill-mode: forwards;
 }
 
 @keyframes slideDown {
-  from { top: -100px; 
+  0% { 
+  	top: -100px; 
   	left: 0px;
     }
-  to { top: 100px;
+ 
+  50% {
+    top: 250px; 
   	left: 0px;
-    }
+  }
+  100% {
+    top: 100px; 
+  	left: 0px;
+  }
 }
