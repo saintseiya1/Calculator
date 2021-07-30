@@ -74,7 +74,7 @@ button[value='0'] {
 }
 
 #keypad {
-	width: 250px;
+	width: 233px;
 	height: 250px;
 	border: 7px outset lightgray;
 }
@@ -160,8 +160,9 @@ footer {
 #wrapper {
 	background: url('cartoon-calculator2.jpg');
 	background-repeat: no-repeat;
-	background-size: 225px 250px;
-	background-position: 270px 45px;
+	background-size: 140px 250px;
+	background-position: 240px 45px;
+	
 	animation-name: addition;
 	animation-duration: 3s;
 }
